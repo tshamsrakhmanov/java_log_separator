@@ -28,6 +28,7 @@ public class SampleSeparator {
                 // create temp file, where we'll store all positive regex results (mode - append to the end)
                 File temp_file = new File(theDir + "/" + input_filename + ".csv");
                 Writer output_internal = new BufferedWriter(new FileWriter(temp_file, true));
+
                 //noinspection StringConcatenationInsideStringBufferAppend
                 output_internal.append("date" + input_separator + "time" + input_separator + "type" + input_separator + "command" + input_separator + "subcommand\n");
 

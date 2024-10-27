@@ -46,7 +46,6 @@ public class Main {
     }
 
     public static boolean isNameValid(String input_filename) {
-
         return !input_filename.isBlank();
     }
 }
