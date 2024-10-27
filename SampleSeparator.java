@@ -5,17 +5,12 @@ public class SampleSeparator {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public void run(String input_separator, String input_path, String input_filename) throws IOException {
-        System.out.println(input_separator);
-        System.out.println(input_path);
-        System.out.println(input_filename);
 
         SampleLogger sampleLogger = new SampleLogger();
         File folder = new File(input_path);
         File[] listOfFiles = folder.listFiles();
 
-
         if (listOfFiles != null) {
-
             int applicable_files_scanned = 0;
 
             // run through files in folder, if they even present
