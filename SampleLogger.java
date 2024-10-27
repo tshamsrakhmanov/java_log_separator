@@ -19,7 +19,6 @@ public class SampleLogger {
 
     public void help(){
         System.out.println("JAVA_LOG_SEPARATOR");
-        System.out.println();
         System.out.println("Usage: java -jar <jar filename> [SEPARATOR] [PATH] [FILE NAME]");
         System.out.println("[SEPARATOR]     {mandatory}");
         System.out.println("    Any symbol or series of chars which will be used to separate significant parts of your log file");
@@ -43,7 +42,7 @@ public class SampleLogger {
     }
 
     public void success(){
-        System.out.println("// JAVA_LOG_REGEX [ INFO ]");
+        System.out.println("// JAVA_LOG_SEPARATOR [ INFO ]");
         System.out.println("// Success!");
     }
 }
