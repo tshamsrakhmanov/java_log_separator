@@ -35,4 +35,14 @@ public class SampleLogger {
         System.out.println("Author: Timur Shamsrakhmanov");
         System.out.println("Autumn 2024");
     }
+
+    public void error_no_files_detected(){
+        System.out.println("// JAVA_LOG_SEPARATOR [ ERROR ]");
+        System.out.println("// No files or no regex applicable strings are detected by path.");
+    }
+
+    public void success(){
+        System.out.println("// JAVA_LOG_REGEX [ INFO ]");
+        System.out.println("// Success!");
+    }
 }

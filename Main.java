@@ -2,8 +2,6 @@ import java.io.File;
 
 public class Main {
 
-    public static final String REGEX_PATTERN = "^[\\w,\\s-]+\\.[A-Za-z]{3}$";
-
     public static void main(String[] args) {
 
         SampleLogger sampleLogger = new SampleLogger();
@@ -28,7 +26,12 @@ public class Main {
 
         // program start
         SampleSeparator sampleSeparator = new SampleSeparator();
-        sampleSeparator.run(args[0], args[1], args[2]);
+        try {
+            sampleSeparator.run(args[0], args[1], args[2]);
+        } catch (Exception e) {
+            //noinspection ThrowablePrintedToSystemOut
+            System.out.println(e);
+        }
     }
 
     public static boolean isPathValid(String path_to_folder) {
@@ -44,10 +47,6 @@ public class Main {
 
     public static boolean isNameValid(String input_filename) {
 
-        if (input_filename == null) {
-            return false;
-        }
-        return input_filename.matches(REGEX_PATTERN);
-
+        return !input_filename.isBlank();
     }
 }
